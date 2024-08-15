@@ -1,0 +1,101 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden; /* Evitar el scroll */
+}
+
+/* Estilo para los contenedores de formularios y lista de productos */
+div {
+    width: 30%; /* Ajusta el ancho para que todo entre en la pantalla */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo de los formularios */
+form {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Estilo general para los títulos */
+h1 {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Estilo para las etiquetas */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #666;
+}
+
+/* Estilo para los campos de entrada */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Estilo para el botón de agregar producto */
+button[type="submit"] {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    background-color: #5cb85c;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+/* Estilo específico para el botón de eliminar */
+#formDelete button[type="submit"] {
+    background-color: #d9534f; /* Color rojo */
+}
+
+#formDelete button[type="submit"]:hover {
+    background-color: #c9302c;
+}
+
+/* Estilo de la lista de productos */
+#productList {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    overflow-y: auto;
+    height: calc(100vh - 40px); /* Ajusta la altura para que encaje en la pantalla */
+}

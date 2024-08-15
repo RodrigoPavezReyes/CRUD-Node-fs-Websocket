@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+  <div>
+    <h1>FORMULARIO DE PRODUCTOS</h1>
+    <form action="/api/products" method="post" id="formProducts">
+    <label for="title">TITLE</label>
+    <input type="text" id="title" name="title" >
+    <label for="description">DESCRIPTION</label>
+    <input type="text"  id="description" name="description">
+    <label for="price" >PRICE</label>
+    <input type="number"  name="price" id="price">
+    <label for="thumbnail">THUMBNAIL</label>
+    <input type="text" id="thumbnail" name="thumbnail">
+    <label for="code">CODE</label>
+    <input type="text" id="code" name="code">
+    <label for="stock">STOCK</label>
+    <input type="number" name="stock" id="stock">
+    <button type="submit">Agregar Producto</button>
+    </form>
+  </div>
+  <div>
+    <h1>ELIMINAR PRODUCTO</h1>
+    <form action="/products/:pid" id="formDelete">
+      <label for="idDelete">ID PRODUCTO</label>
+      <input type="number" id="idDelete" name="idDelete">
+      <button type="submit">Eliminar Producto</button>
+    </form>
+  </div>
+    <div>
+        <h1>LISTA DE PRODUCTOS</h1>
+        <ul id="productList"></ul> <!--  id para la lista de productos -->
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script> <!-- socket del cliente -->
+    <script src="./js/index.js"></script>
+    
+</body>
+</html>
