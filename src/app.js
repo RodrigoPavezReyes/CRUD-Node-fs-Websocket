@@ -23,7 +23,7 @@ const productManager = new ProductsManager("products.json") //instancio productM
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(express.static(path.join(__dirname, "/views"))) //indico donde quiero que me muestre
-//informacion cuando visito un url(index.html que esta dentro de public)
+//informacion cuando visito un url(index hb que esta dentro de views)
 
 app.use(express.static(path.join(__dirname, "/public"))) //para trabajar con websocket y 
 //mostrar form en tiempo real con la carga de productos

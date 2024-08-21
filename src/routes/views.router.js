@@ -17,7 +17,4 @@ router.get("/", (req,res)=>{
     res.render("index.html",{}) //solo se renderiza la vista, para websocket
 })
 
-
-
-
 export default router
