@@ -1,4 +1,60 @@
-Consigna
+# CRUD de Productos
+
+Este proyecto es una aplicación CRUD (Crear, Leer, Actualizar, Eliminar) de productos, desarrollada con Node.js. Utiliza el sistema de archivos (file system) para almacenar los datos y WebSocket para la actualización en tiempo real de la lista de productos.
+
+## Características
+
+- **Crear Producto**: Añade nuevos productos al sistema.
+- **Leer Producto**: Visualiza la lista de productos almacenados.
+- **Actualizar Producto**: Modifica la información de un producto existente.
+- **Eliminar Producto**: Elimina un producto del sistema.
+- **Actualización en tiempo real**: La lista de productos se actualiza en tiempo real utilizando WebSocket.
+
+## Tecnologías Utilizadas
+
+- **Node.js**: Para el backend del proyecto.
+- **File System (fs)**: Para el almacenamiento de datos en archivos locales.
+- **WebSocket**: Para la actualización en tiempo real de los datos en el frontend.
+
+## Requisitos Previos
+
+- Node.js instalado en tu máquina.
+
+## Instalación
+
+1. Clona este repositorio en tu máquina local:
+    ```bash
+    git clone https://github.com/tu-usuario/tu-repositorio.git
+    ```
+
+2. Navega al directorio del proyecto:
+    ```bash
+    cd tu-repositorio
+    ```
+
+3. Instala las dependencias necesarias:
+    ```bash
+    npm install
+    ```
+
+## Uso
+
+1. Inicia el servidor:
+    ```bash
+    npm start
+    ```
+
+2. Abre tu navegador y navega a `http://localhost:3000` para ver la aplicación en acción.
+
+## Estructura del Proyecto
+
+- **app.js**: Archivo principal de la aplicación, donde se configura el servidor.
+- **routes/**: Contiene las rutas para manejar las operaciones CRUD.
+- **public/**: Contiene los archivos estáticos, como el HTML y los scripts de cliente.
+- **views/**: Contiene las vistas que se renderizan en el frontend.
+- **utils/**: Funciones auxiliares para manejar la lógica del file system.
+
+# Consigna
 ✓ Realizar una clase de nombre “ProductManager”,
 el cual permitirá trabajar con múltiples
 productos. Éste debe poder agregar, consultar,
@@ -57,9 +113,9 @@ Formato del entregable
 ✓ Archivo de javascript con el nombre
 ProductManager.js
 
-////////////////////////////////////////////////
 
-Consigna
+
+# Consigna
 ✓ Desarrollar un servidor basado en
 express donde podamos hacer
 consultas a nuestro archivo de
@@ -109,3 +165,43 @@ ProductManager dentro.
 - package.json con la info del proyecto.
 - NO INCLUIR LOS node_modules
 generados.
+
+
+# Consigna
+✓ Configurar nuestro proyecto para que
+trabaje con Handlebars y websocket.
+Aspectos a incluir
+✓ Configurar el servidor para integrar el
+motor de plantillas Handlebars e instalar
+un servidor de socket.io al mismo.
+✓ Crear una vista “home.handlebars” la
+cual contenga una lista de todos los
+productos agregados hasta el momento
+Websockets
+DESAFÍO ENTREGABLE
+✓ Además, crear una vista
+“realTimeProducts.handlebars”, la cual
+vivirá en el endpoint
+“/realtimeproducts” en nuestro views
+router, ésta contendrá la misma lista de
+productos, sin embargo, ésta trabajará
+con websockets.
+✓ Al trabajar con websockets, cada
+vez que creemos un producto
+nuevo, o bien cada vez que
+eliminemos un producto, se debe
+actualizar automáticamente en
+dicha vista la lista.
+Sugerencias
+✓ Ya que la conexión entre una consulta
+HTTP y websocket no está contemplada
+dentro de la clase. Se recomienda que,
+para la creación y eliminación de un
+producto, Se cree un formulario simple
+en la vista
+realTimeProducts.handlebars. Para que
+el contenido se envíe desde
+websockets y no HTTP. Sin embargo,
+esta no es la mejor solución, leer el
+siguiente punto.
+
